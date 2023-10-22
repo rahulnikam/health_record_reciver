@@ -17,13 +17,10 @@ public class HealthRecordController {
     @Autowired
     private HealthRecordService healthRecordService;
 
-
-
-
     @RequestMapping(value = "/health-records", method = RequestMethod.POST)
     public ResponseEntity<String> addHealthRecordCall(@RequestBody HealthRecord healthRecord) {
         healthRecordService.addHealthRecord(healthRecord);
-        return new ResponseEntity<>("Success",HttpStatus.OK);
+        return new ResponseEntity<>("Success", HttpStatus.OK);
     }
 
 }
